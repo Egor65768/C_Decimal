@@ -32,7 +32,7 @@ endif
 clean: 
 	rm -fr *.o *.a *.gch *.gcno *.gcda gcov_test s21_test.info ./report ./test
 
-rebuild: clean test 
+rebuild: clean s21_decimal.a test 
 
 gcov_report: 
 	$(CC) $(FLAGS) $(GCOV_FLAGS) ${TEST_LIB} ${DECIMAL} ${LINK_FLAGS} -o test
